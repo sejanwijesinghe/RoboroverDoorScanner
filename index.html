@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RoboRover Event Door Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img id="top-left-logo" src="images/logo.png" alt="Event Arena">
+
+    <div id="panel">
+        <canvas id="circuit-bg"></canvas>
+        <div id="particles"></div>
+
+        <div class="hud-element" id="hud-top-left">System Online</div>
+        <div class="hud-element" id="hud-top-right">RoboRover Battle 2025</div>
+        <div class="hud-element" id="hud-bottom-left">4x4 Vehicle Mode Active</div>
+        <div class="hud-element" id="hud-bottom-right">Security: Battle-Ready</div>
+
+        <div id="scan-screen">
+            <div id="prompt" class="neon-glow">Tap & Hold to Scan</div>
+            <div id="hand-container">
+                <img id="hand-img" src="images/h1.png" alt="Hand">
+                <div id="scan-beam"></div>
+            </div>
+        </div>
+
+        <div id="error-msg">SCAN INCOMPLETE – TRY AGAIN</div>
+
+        <div id="access-granted">
+            <div class="scan-line"></div>
+            <div class="access-title">BATTLE STARTED</div>
+            <svg class="check-spark" viewBox="0 0 100 100">
+                <polyline points="15,50 42,78 85,28"/>
+            </svg>
+        </div>
+
+        <div id="event-started">
+            <h2>BATTLE ON LIVE</h2>
+            <div id="video-wrapper">
+                <video id="final-video" autoplay muted loop playsinline>
+                    <source src="images/ca1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div id="bottom-tagline">
+                CONQUER <span class="the">THE</span> TRACK, BEAT <span class="the">THE</span> CLOCK
+            </div>
+            <div id="shockwave"></div>
+            <div id="particle-burst"></div>
+        </div>
+
+        <button id="reset-button" onclick="resetEvent()">Reset Event</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
